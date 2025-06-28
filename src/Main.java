@@ -2,14 +2,23 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        AgendaContatos agendaContatos = new AgendaContatos();
+
+        agendaContatos.exibirContatos();
+
+        agendaContatos.adicionarContato("Michel",  812222222);
+        agendaContatos.adicionarContato("Adriana",  818858565);
+        agendaContatos.adicionarContato("Adriana Ana",  815896324);
+        agendaContatos.adicionarContato("Adriana Dio",  928965324);
+        agendaContatos.adicionarContato("Adriana",  90578);
+
+        agendaContatos.exibirContatos();
+
+        System.out.println(agendaContatos.pesquisarPorNome("Michel"));
+
+        System.out.println("Contato atualizado: " + agendaContatos.atualizarNumeroContato("Michel", 818560712));
+
+        agendaContatos.exibirContatos();
     }
 }
